@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rive Embed Full Screen</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .rive-container {
+    position: fixed; /* Use fixed to cover the entire screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .rive-iframe {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Use object-fit to cover the area of the .rive-container */
+  .rive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will cover the area without stretching the content */
+  }
+</style>
+</head>
+<body>
+
+<div class="rive-container">
+  <div class="rive-iframe">
+    <iframe src="https://rive.app/s/Gc5I_gNtmEGZ8G6bAVpDlQ/embed" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+</body>
+</html>
